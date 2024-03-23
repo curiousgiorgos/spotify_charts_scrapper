@@ -2,13 +2,13 @@
 # Note the development database will always be create (if it doesn't exist!) 
 # regardless of development mode or not
 
-from scrapper.scrapper import pipeline_scrape
+from scraper.scraper import pipeline_scrape
 from features.features import pipeline_features
 from create_database import create_database
 from persistence.persistence import pipeline_persistence
 import sys
 
-sys.path.append('./scrapper')
+sys.path.append('./scraper')
 
 if __name__=="__main__":
     dev_env = len(sys.argv) > 1 and sys.argv[1] == "dev"

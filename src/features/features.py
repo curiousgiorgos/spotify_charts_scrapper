@@ -54,12 +54,10 @@ def spotify_login(cid, secret):
 def features_creation(dev_env):
 
     sp = spotify_login(CLIENT_ID, CLIENT_SECRET)
-
-    if dev_env:
-        df = pd.read_csv(INPUT_DATA_PATH_DEV, encoding="utf-8-sig")
-    else:
-        df = pd.read_csv(INPUT_DATA_PATH, encoding="utf-8-sig")
-
+    
+    file = INPUT_DATA_PATH_DEV if dev_env else INPUT_DATA_PATH 
+    df = pd.read_csv(file, encoding="utf-8-sig")
+    
     # drop not required columns for performance
     df_songs = df.drop(COLUMNS_TO_DROP, axis=1).drop_duplicates()
 

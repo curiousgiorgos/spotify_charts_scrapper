@@ -5,7 +5,7 @@ from airflow import DAG
 
 from airflow.operators.python_operator import PythonOperator
 
-from src.scrapper.scrapper import pipeline_scrape
+from src.scraper.scraper import pipeline_scrape
 from src.features.features import pipeline_features
 from src.create_database import create_database
 from src.persistence.persistence import pipeline_persistence

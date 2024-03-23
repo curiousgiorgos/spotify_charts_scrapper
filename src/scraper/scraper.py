@@ -12,11 +12,11 @@ from bs4 import BeautifulSoup
 from time import sleep
 
 try: 
-    from .scrapper_model import SpotifyChartEntry, SpotifyCountryList
+    from .scraper_model import SpotifyChartEntry, SpotifyCountryList
     from .utils.url_crafter import create_urls
     from .utils.date_resolver import get_closest_past_thursday
 except ImportError as e:
-    from scrapper_model import SpotifyChartEntry, SpotifyCountryList
+    from scraper_model import SpotifyChartEntry, SpotifyCountryList
     from utils.url_crafter import create_urls
     from utils.date_resolver import get_closest_past_thursday
 

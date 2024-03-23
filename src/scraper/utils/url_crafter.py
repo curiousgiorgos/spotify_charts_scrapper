@@ -1,8 +1,8 @@
+COUNTRIES_FILE_PATH = "./countries_lists/countries.txt"
+COUNTRIES_DEV_FILE_PATH = "./countries_lists/countries_test.txt"
 def create_urls(dev_env=False):
 
-    countries_file_path = "./countries_lists/countries.txt"
-    if dev_env:
-        countries_file_path = "./countries_lists/countries_test.txt"
+    countries_file_path = COUNTRIES_DEV_FILE_PATH if dev_env else COUNTRIES_FILE_PATH
 
     with open(countries_file_path, "r") as countries:
         lines = countries.readlines()
