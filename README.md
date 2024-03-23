@@ -1,4 +1,4 @@
-# Spotify scraper with Apache Airflow
+# Spotify Scraper with Apache Airflow
 
 ## Overview
 
